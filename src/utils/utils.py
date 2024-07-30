@@ -148,6 +148,7 @@ def read_cifar10_data(NUM_USERS, NUM_LABELS):
 
     # Create data structure
     train_data = {'users': [], 'user_data':{}, 'num_samples':[]}
+    val_data = {'users': [], 'user_data':{}, 'num_samples':[]}
     test_data = {'users': [], 'user_data':{}, 'num_samples':[]}
 
     # Setup 5 users
@@ -159,8 +160,9 @@ def read_cifar10_data(NUM_USERS, NUM_LABELS):
         X[i][:], y[i][:] = zip(*combined)
 
         num_samples = len(X[i])
-        train_len = int(0.75*num_samples)
-        test_len = num_samples - train_len
+        train_len = int(0.7*num_samples)
+        val_len = int(0.2*num_samples)
+        test_len = num_samples - (train_len+val_len)
 
         #X_train, X_test, y_train, y_test = train_test_split(X[i], y[i], train_size=0.75, stratify=y[i])\
         
@@ -168,11 +170,17 @@ def read_cifar10_data(NUM_USERS, NUM_LABELS):
         test_data["user_data"][uname] =  {'x': X[i][:test_len], 'y': y[i][:test_len]} 
         test_data['num_samples'].append(test_len)
 
-        train_data["user_data"][uname] =  {'x': X[i][test_len:], 'y': y[i][test_len:]}
+        val_data['users'].append(uname)
+        val_data["user_data"][uname] =  {'x': X[i][test_len:test_len+val_len], 'y': y[i][test_len:test_len+val_len]} 
+        val_data['num_samples'].append(val_len)
+
+        
+        
+        train_data["user_data"][uname] =  {'x': X[i][test_len+val_len:], 'y': y[i][test_len+val_len:]}
         train_data['users'].append(uname)
         train_data['num_samples'].append(train_len)
         
-    return train_data['users'], train_data['user_data'], test_data['user_data']
+    return train_data['users'], train_data['user_data'], test_data['user_data'], val_data['user_data']
 
 def read_cifar100_data(NUM_USERS, NUM_LABELS):
     transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
@@ -1189,17 +1197,21 @@ def read_user_data(index,data,dataset):
     id = data[0][index]
     train_data = data[1][id]
     test_data = data[2][id]
-    X_train, y_train, X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
+    val_data = data[3][id]
+    X_train, y_train, X_test, y_test, X_val, y_val = train_data['x'], train_data['y'], test_data['x'], test_data['y'], val_data['x'], val_data['y']
     
     if(dataset == "CIFAR10"):
-        X_train, y_train, X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
+        X_train, y_train, X_test, y_test, X_val, y_val = train_data['x'], train_data['y'], test_data['x'], test_data['y'], val_data['x'], val_data['y']
         X_train = torch.Tensor(X_train).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
         y_train = torch.Tensor(y_train).type(torch.int64)
         X_test = torch.Tensor(X_test).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
         y_test = torch.Tensor(y_test).type(torch.int64)
+        X_val = torch.Tensor(X_val).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
+        y_val = torch.Tensor(y_val).type(torch.int64)
+    
     
     elif(dataset == "CIFAR100"):
-        X_train, y_train, X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
+        X_train, y_train,  X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
         X_train = torch.Tensor(X_train).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
         y_train = torch.Tensor(y_train).type(torch.int64)
         X_test = torch.Tensor(X_test).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
@@ -1241,6 +1253,7 @@ def read_user_data(index,data,dataset):
     
 
     train_data = [(x, y) for x, y in zip(X_train, y_train)]
+    val_data = [(x, y) for x, y in zip(X_test, y_test)]
     test_data = [(x, y) for x, y in zip(X_test, y_test)]
     
     return train_data, test_data        

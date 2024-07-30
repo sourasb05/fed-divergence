@@ -47,27 +47,38 @@ class cnn_Cifar10(nn.Module):
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
         
-        return F.log_softmax(x, dim=1)      
+        
+        return F.log_softmax(x, dim=1)  
 
-"""class cnn_Cifar10(nn.Module):
+# CIFAR-10 Modified for MOON
+
+class cnn_Cifar10_MOON(nn.Module):
     def __init__(self):
-        super(cnn_Cifar10, self).__init__()
-        self.conv1 = nn.Conv2d(3, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
+        super(cnn_Cifar10_MOON, self).__init__()
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=32, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(in_channels=32, out_channels=64, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv3 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1)
+        
+        self.fc1 = nn.Linear(in_features=128 * 4 * 4, out_features=512)
+        self.fc2 = nn.Linear(in_features=512, out_features=128)
+        self.fc3 = nn.Linear(in_features=128, out_features=10)
 
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        x = self.fc3(x)
-        return F.log_softmax(x, dim=1)
-# CNN model for FMNIST"""
+        h = self.pool(F.relu(self.conv3(x)))  # h is the output of the last convolutional layer
+        
+        # Flatten the output for the fully connected layers
+        h_flat = h.view(-1, 128 * 4 * 4)
+        
+        x = F.relu(self.fc1(h_flat))
+        x_proj = F.relu(self.fc2(x))  # x is the output after the second fully connected layer
+        y = self.fc3(x_proj)  # y is the final output logits
+        
+        return h, x_proj, y
+
+
 
 class cnn_Fmnist(nn.Module):
   def __init__(self, args):

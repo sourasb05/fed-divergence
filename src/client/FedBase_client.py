@@ -8,6 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader
+import sys
 
 from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
 
@@ -17,7 +18,7 @@ class FedBase:
     Base class for users in FL
     """
 
-    def __init__(self, args, i, model,loss,train_set,test_set,data_ratio,device):
+    def __init__(self, args, i, model,criterion,train_set,test_set,data_ratio,device):
 
         self.local_model = copy.deepcopy(model)
         
@@ -27,8 +28,9 @@ class FedBase:
         self.learning_rate = args.lr
         self.lambda_prox = args.lambda_prox
         self.batch_size = args.batch_size
+        self.fl_algorithm = args.fl_algorithm
         self.device = device
-        self.loss = loss
+        self.criterion = criterion
         self.data_ratio = data_ratio
         self.participation_prob = 1.0
         self.minimum_test_loss = 10000.0
@@ -40,7 +42,7 @@ class FedBase:
         self.trainloaderfull = DataLoader(train_set, self.train_samples)
         
         self.testloader =  DataLoader(test_set, self.test_samples)
-        self.optimizer = optim.Adam(self.local_model.parameters(), lr=self.learning_rate)
+        self.optimizer = optim.SGD(self.local_model.parameters(), lr=self.learning_rate)
         
        
 
@@ -54,17 +56,13 @@ class FedBase:
     
 
     def set_parameters(self, glob_model):
-        glob_model_param=glob_model.parameters()
-        # Store the initial local model parameters
-        if isinstance(glob_model_param, nn.Parameter):
-            print("It is nn.Param")
-            for l_param, g_param in zip(self.local_model.parameters(), glob_model_param):
+        for l_param, g_param in zip(self.local_model.parameters(), glob_model):
                 l_param.data = g_param.data.clone()
-        elif isinstance(glob_model_param, list):
-            print("It is a list")
-            for idx, l_param in enumerate(self.local_model.parameters()):
-                l_param.data = glob_model_param[idx].clone()
-
+        """if self.id == 2:
+            for param in self.local_model.parameters():
+                print(f"from fedbase client: {param}")"""
+            
+        
             
     def get_parameters(self):
         for param in self.local_model.parameters():
@@ -126,8 +124,11 @@ class FedBase:
         with torch.no_grad():  # Inference mode, gradients not needed
             for inputs, labels in self.testloader:
                 inputs, labels = inputs.to(self.device), labels.to(self.device)
-                outputs = self.local_model(inputs)
-                loss = self.loss(outputs, labels)
+                if self.fl_algorithm in ["MOON", "MOON_KL", "MOON_L2"]:
+                    _,_,outputs = self.local_model(inputs)
+                else:
+                    outputs = self.local_model(inputs)
+                loss = self.criterion(outputs, labels)
                 total_loss += loss.item()
                 _, predicted = torch.max(outputs.data, 1)
                 y_true.extend(labels.cpu().numpy())  # Collect true labels
@@ -158,8 +159,11 @@ class FedBase:
         with torch.no_grad():  # Inference mode, gradients not needed
             for inputs, labels in self.trainloaderfull:
                 inputs, labels = inputs.to(self.device), labels.to(self.device)
-                outputs = self.local_model(inputs)
-                loss = self.loss(outputs, labels)
+                if self.fl_algorithm in ["MOON", "MOON_KL", "MOON_L2"]:
+                    _,_,outputs = self.local_model(inputs)
+                else:
+                    outputs = self.local_model(inputs)
+                loss = self.criterion(outputs, labels)
                 total_loss += loss.item()
                 _, predicted = torch.max(outputs.data, 1)
                 y_true.extend(labels.cpu().numpy())  # Collect true labels

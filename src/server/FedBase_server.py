@@ -44,6 +44,8 @@ class Base_server:
         self.local_recall  = []
         self.local_f1score  = []
 
+        #self.global_model_parameters
+
         self.users = []
         
         date_and_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -52,15 +54,22 @@ class Base_server:
             project="DIPA2-loss-function",
             name="{}_{}".format(args.fl_algorithm, date_and_time),
             mode=None if args.wandb else "disabled")
-      
+        
+        """for param in self.global_model.parameters():
+            print(f"from fedbase : {param}")
+      """
 
     def send_parameters(self):   
         if len(self.selected_users) == 0:
             assert(f"AssertionError : The client can't be zero")
         else:
             for user in self.selected_users:
-                print(user.id)
-                user.set_parameters(self.global_model)
+                #print(user.id)
+                """
+                for param in self.global_model.parameters():
+                    print(f"from fedbase send_parameters : {param}")
+                """
+                user.set_parameters(self.global_model.parameters())
 
     def initialize_parameters_to_zero(self):
         for param in self.global_model.parameters():

@@ -3,6 +3,9 @@ warnings.filterwarnings("ignore")
 from src.train_model.define_model_and_loss import define_model_and_loss
 from src.server.FedAvg_server import Fed_Avg_Server
 from src.server.FedProx_server import FedProx_Server
+from src.server.FedMOON_server import FedMOON_Server
+from src.server.FedMOON_KL_server import FedMOON_KL_Server
+from src.server.FedMOON_l2_server import FedMOON_l2_Server
 from src.options import args_parser
 import torch
 import os
@@ -32,6 +35,18 @@ def main(args):
 
         elif args.fl_algorithm == "FedProx":
             server = FedProx_Server(args, model, loss, device, current_directory)
+
+        elif args.fl_algorithm == "MOON":
+            server = FedMOON_Server(args, model, loss, device, current_directory)
+
+        elif args.fl_algorithm == "MOON_KL":
+            server = FedMOON_KL_Server(args, model, loss, device, current_directory)
+
+        elif args.fl_algorithm == "MOON_L2":
+            server = FedMOON_l2_Server(args, model, loss, device, current_directory)
+
+
+
 
 
         server.train()

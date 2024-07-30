@@ -21,8 +21,13 @@ def define_model_and_loss(args, device):
                 loss = nn.CrossEntropyLoss()
 
             elif args.dataset == "CIFAR10":
-                model = cnn_Cifar10().to(device)
-                loss = nn.CrossEntropyLoss()
+                if args.fl_algorithm in ["MOON", "MOON_KL", "MOON_L2"]:
+                    model = cnn_Cifar10_MOON().to(device)
+                    loss = nn.CrossEntropyLoss()
+                else:
+                    model = cnn_Cifar10().to(device)
+                    loss = nn.CrossEntropyLoss()
+
 
             elif args.dataset == "EMNIST":
                 model = cnn_Emnist().to(device)

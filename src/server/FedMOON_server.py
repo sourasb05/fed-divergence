@@ -7,7 +7,7 @@ import pandas as pd
 from tqdm import trange
 from datetime import date
 import matplotlib.pyplot as plt
-from src.client.FedProx_client import FedProx_Client
+from src.client.FedMOON_client import FedMOON_Client
 from src.server.FedBase_server import Base_server
 from src.utils.utils import select_users, read_data, read_user_data 
 import numpy as np
@@ -16,7 +16,7 @@ import torch.nn.init as init
 # implementation of FedAvg server
 
 
-class FedProx_Server(Base_server):
+class FedMOON_Server(Base_server):
 
     def __init__(self, args, model, loss, device, curr_dir):
         super().__init__(args, model, loss, device, curr_dir)
@@ -30,7 +30,7 @@ class FedProx_Server(Base_server):
             train, test = read_user_data(i,data,args.dataset)
             data_ratio = 1/total_users
             # print("data_ratio",data_ratio) ## The ratio is not fixed yet
-            user = FedProx_Client(args,i, model,loss,train,test,data_ratio,device)   # Creating the instance of the users. 
+            user = FedMOON_Client(args,i, model,loss,train,test,data_ratio,device)   # Creating the instance of the users. 
         
             self.users.append(user)
         
