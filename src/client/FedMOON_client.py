@@ -5,8 +5,8 @@ from src.client.FedBase_client import FedBase
 
 class FedMOON_Client(FedBase):
 
-    def __init__(self, args, i, model, loss, train_set, test_set, data_ratio, device):
-        super().__init__(args, i, model, loss, train_set, test_set, data_ratio, device)
+    def __init__(self, args, i, model, loss, train_set, test_set, data_ratio, device, current_directory):
+        super().__init__(args, i, model, loss, train_set, test_set, data_ratio, device, current_directory)
         self.global_model = copy.deepcopy(model)
         self.prev_model = copy.deepcopy(model)
         self.temperature = args.temperature
@@ -22,7 +22,7 @@ class FedMOON_Client(FedBase):
             prev_global_param.data = curr_global_param.data.clone()
             #prev_global_param.grad.data = curr_global_param.grad.data.clone()          
     
-    def local_train(self, global_model_param):
+    def local_train(self, global_model_param, t):
         self.initialize_previous_model()
         self.initialize_global_model(global_model_param)
         self.local_model.train()
@@ -64,9 +64,11 @@ class FedMOON_Client(FedBase):
 
                 loss.backward()
                 self.optimizer.step()
+                
 
                 cnt += 1
-
+            self.test_local(t)
+                
 """
 
             epoch_loss_collector.append(loss.item())

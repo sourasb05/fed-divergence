@@ -1,0 +1,35 @@
+wandb: Currently logged in as: sourasb05 (sourasb). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.17.5 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.3
+wandb: Run data is saved locally in /proj/bhuyan24/fed-divergence/wandb/run-20240731_160815-q07k1skx
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run MOON_L2_2024-07-31_16-08-12
+wandb: ⭐️ View project at https://wandb.ai/sourasb/DIPA2-loss-function
+wandb: 🚀 View run at https://wandb.ai/sourasb/DIPA2-loss-function/runs/q07k1skx
+============================================================
+Summary of training process:
+FL Algorithm: MOON_L2
+model: CNN
+optimizer: SGD
+Batch size: 124
+Global_iters: 100
+Local_iters: 10
+experiments: 1
+device : 0
+Learning rate: 0.01
+============================================================
+/proj/bhuyan24/fed-divergence
+cnn_Cifar10_MOON(
+  (conv1): Conv2d(3, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (fc1): Linear(in_features=2048, out_features=512, bias=True)
+  (fc2): Linear(in_features=512, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=10, bias=True)
+)
+CrossEntropyLoss()
+CIFAR10
+./data/data/noisy/0.1_50_10/train/cifa_train.json
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:34<56:51, 34.46s/it]slurmstepd: error: *** JOB 11538396 ON node077 CANCELLED AT 2024-07-31T16:10:31 ***

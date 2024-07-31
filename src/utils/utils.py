@@ -182,6 +182,37 @@ def read_cifar10_data(NUM_USERS, NUM_LABELS):
         
     return train_data['users'], train_data['user_data'], test_data['user_data'], val_data['user_data']
 
+def read_cifar10_json(NOISE_LEVEL, NUM_USERS, NUM_LABELS):
+
+    train_path = './data/data/noisy/' + str(NOISE_LEVEL) + "_" + str(NUM_USERS) + '_' + str(NUM_LABELS) +'/train/cifa_train.json'
+    test_path = './data/data/noisy/' + str(NOISE_LEVEL) + "_" + str(NUM_USERS) + '_' + str(NUM_LABELS) + '/test/cifa_test.json'
+    print(train_path)
+    clients = []
+    groups = []
+    train_data = {}
+    test_data = {}
+    train_samples = []
+    test_samples = []
+
+    # Open and read the JSON file
+    with open(train_path, 'r') as file:
+        data = json.load(file)
+    clients.extend(data['users'])
+    train_data.update(data['user_data'])
+    train_samples.extend(data['num_samples'])
+
+
+    with open(test_path, 'r') as file:
+        data = json.load(file)
+    # clients.extend(data['users'])
+    test_data.update(data['user_data'])
+    test_samples.extend(data['num_samples'])
+
+
+    return clients, train_data, test_data, train_samples, test_samples
+
+
+
 def read_cifar100_data(NUM_USERS, NUM_LABELS):
     transform = transforms.Compose([transforms.ToTensor(),transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
@@ -1147,8 +1178,10 @@ def read_data(args):
     '''
     
     if(args.dataset == "CIFAR10"):
-        clients, train_data, test_data = read_cifar10_data(args.num_users, args.num_labels)
-        return clients, train_data, test_data
+        #clients, train_data, test_data = read_cifar10_data(args.num_users, args.num_labels)
+        clients, train_data, test_data, train_samples, test_samples  = read_cifar10_json(args.noise_level, args.num_users, args.num_labels)
+        
+        return clients, train_data, test_data, train_samples, test_samples
     
     elif(args.dataset == "CIFAR100"):
         clients, train_data, test_data = read_cifar100_data(args.num_users, args.num_labels)
@@ -1195,19 +1228,19 @@ def read_data(args):
 
 def read_user_data(index,data,dataset):
     id = data[0][index]
-    train_data = data[1][id]
-    test_data = data[2][id]
-    val_data = data[3][id]
-    X_train, y_train, X_test, y_test, X_val, y_val = train_data['x'], train_data['y'], test_data['x'], test_data['y'], val_data['x'], val_data['y']
+    train_data = data[1][str(id)]
+    test_data = data[2][str(id)]
+    # val_data = data[3][id]
+    X_train, y_train, X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
     
     if(dataset == "CIFAR10"):
-        X_train, y_train, X_test, y_test, X_val, y_val = train_data['x'], train_data['y'], test_data['x'], test_data['y'], val_data['x'], val_data['y']
+        X_train, y_train, X_test, y_test = train_data['x'], train_data['y'], test_data['x'], test_data['y']
         X_train = torch.Tensor(X_train).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
         y_train = torch.Tensor(y_train).type(torch.int64)
         X_test = torch.Tensor(X_test).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
         y_test = torch.Tensor(y_test).type(torch.int64)
-        X_val = torch.Tensor(X_val).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
-        y_val = torch.Tensor(y_val).type(torch.int64)
+        # X_val = torch.Tensor(X_val).view(-1, NUM_CHANNELS_CIFAR, IMAGE_SIZE_CIFAR, IMAGE_SIZE_CIFAR).type(torch.float32)
+        # y_val = torch.Tensor(y_val).type(torch.int64)
     
     
     elif(dataset == "CIFAR100"):
@@ -1253,7 +1286,6 @@ def read_user_data(index,data,dataset):
     
 
     train_data = [(x, y) for x, y in zip(X_train, y_train)]
-    val_data = [(x, y) for x, y in zip(X_test, y_test)]
     test_data = [(x, y) for x, y in zip(X_test, y_test)]
     
     return train_data, test_data        

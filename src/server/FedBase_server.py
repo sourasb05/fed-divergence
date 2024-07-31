@@ -26,6 +26,7 @@ class Base_server:
         self.batch_size = args.batch_size
         self.num_users_perGR = args.num_users_perGR
         self.optimizer_name = args.optimizer
+        self.noise_level = args.noise_level
         self.num_labels=args.num_labels
        
         self.global_train_acc = []
@@ -48,6 +49,7 @@ class Base_server:
 
         self.users = []
         
+        self.minimum_test_loss = 100000.0
         date_and_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         
         self.wandb = wandb.init(
@@ -77,8 +79,8 @@ class Base_server:
                 init.zeros_(param)
     
     def save_model(self, glob_iter):
-        if glob_iter == self.num_glob_iters-1:
-            model_path = self.current_directory + "/models/" + self.algorithm + "/global_model/"
+        if glob_iter == self.global_iters-1:
+            model_path = f"{self.current_directory}/models/{self.fl_algorithm}/noise_{str(self.noise_level)}_l_{str(self.num_labels)}_N_{str(self.num_users_perGR)}/global_model/"
             if not os.path.exists(model_path):
                 os.makedirs(model_path)
             checkpoint = {'GR': glob_iter,
@@ -89,7 +91,7 @@ class Base_server:
             
         if self.global_test_loss[glob_iter] < self.minimum_test_loss:
             self.minimum_test_loss = self.global_test_loss[glob_iter]
-            model_path = self.current_directory + "/models/" + self.algorithm + "/global_model/"
+            model_path = f"{self.current_directory}/models/{self.fl_algorithm}/noise_{str(self.noise_level)}_l_{str(self.num_labels)}_N_{str(self.num_users_perGR)}/global_model/"
             if not os.path.exists(model_path):
                 os.makedirs(model_path)
             checkpoint = {'GR': glob_iter,
@@ -183,7 +185,7 @@ class Base_server:
             self.wandb.log(data={ "global_recall" : statistics.mean(recalls)})
             self.wandb.log(data={ "global_F1" : statistics.mean(f1s)})
 
-
+            self.save_model(t)
 
         elif which_model == "local":
 
@@ -220,12 +222,12 @@ class Base_server:
         d1 = today.strftime("%d_%m_%Y")
        
         print("exp_no ", self.exp_no)
-        alg = str(self.exp_no) + "_dataset_" + str(self.dataset_name) + "algorithm_" + str(self.fl_algorithm) + "_model_" + str(self.model_name) + "_" + d1
+        alg = f"{str(self.exp_no)}_dataset_{str(self.dataset_name)}_algorithm_{str(self.fl_algorithm)}_model_{str(self.model_name)}_{str(self.num_labels)}_{str(self.num_users_perGR)}_{str(self.noise_level)}_{d1}" 
         
    
         print(alg)
        
-        directory_name = self.fl_algorithm + "/" + self.dataset_name + "/" + str(self.model_name) + "/num_clients/" +  str(self.num_labels)
+        directory_name = f"{self.fl_algorithm}/{self.dataset_name}/{str(self.model_name)}/num_clients_{str(self.num_users_perGR)}/{str(self.num_labels)}/noise_level_{str(self.noise_level)}"
         
         if not os.path.exists("./results/"+directory_name):
         # If the directory does not exist, create it

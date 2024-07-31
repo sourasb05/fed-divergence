@@ -1,0 +1,2018 @@
+============================================================
+Summary of training process:
+FL Algorithm: MOON
+model: CNN
+optimizer: SGD
+Batch size: 124
+Global_iters: 200
+Local_iters: 10
+experiments: 1
+device : 0
+Learning rate: 0.01
+============================================================
+/proj/bhuyan24/fed-divergence
+CIFAR10
+./data/data/noisy/0.2_50_10/train/cifa_train.json
+  0%|          | 0/200 [00:00<?, ?it/s]  0%|          | 1/200 [00:26<1:28:42, 26.75s/it]  1%|          | 2/200 [00:45<1:13:36, 22.31s/it]  2%|▏         | 3/200 [01:05<1:08:36, 20.90s/it]  2%|▏         | 4/200 [01:24<1:06:09, 20.25s/it]  2%|▎         | 5/200 [01:43<1:04:53, 19.97s/it]  3%|▎         | 6/200 [02:03<1:04:09, 19.84s/it]  4%|▎         | 7/200 [02:23<1:03:34, 19.76s/it]  4%|▍         | 8/200 [02:42<1:03:15, 19.77s/it]  4%|▍         | 9/200 [03:02<1:03:05, 19.82s/it]  5%|▌         | 10/200 [03:22<1:03:02, 19.91s/it]  6%|▌         | 11/200 [03:43<1:02:59, 20.00s/it]  6%|▌         | 12/200 [04:03<1:03:01, 20.11s/it]  6%|▋         | 13/200 [04:24<1:03:10, 20.27s/it]  7%|▋         | 14/200 [04:45<1:03:50, 20.59s/it]  8%|▊         | 15/200 [05:06<1:04:21, 20.87s/it]  8%|▊         | 16/200 [05:28<1:04:47, 21.13s/it]  8%|▊         | 17/200 [05:50<1:05:09, 21.36s/it]  9%|▉         | 18/200 [06:12<1:05:13, 21.50s/it] 10%|▉         | 19/200 [06:34<1:05:23, 21.67s/it] 10%|█         | 20/200 [06:56<1:05:32, 21.85s/it] 10%|█         | 21/200 [07:19<1:05:36, 21.99s/it] 11%|█         | 22/200 [07:41<1:05:39, 22.13s/it] 12%|█▏        | 23/200 [08:04<1:05:37, 22.24s/it] 12%|█▏        | 24/200 [08:26<1:05:38, 22.38s/it] 12%|█▎        | 25/200 [08:49<1:05:31, 22.46s/it] 13%|█▎        | 26/200 [09:11<1:05:15, 22.50s/it] 14%|█▎        | 27/200 [09:34<1:04:51, 22.50s/it] 14%|█▍        | 28/200 [09:56<1:04:16, 22.42s/it] 14%|█▍        | 29/200 [10:18<1:03:10, 22.17s/it] 15%|█▌        | 30/200 [10:39<1:01:53, 21.84s/it] 16%|█▌        | 31/200 [11:00<1:00:44, 21.56s/it] 16%|█▌        | 32/200 [11:21<59:48, 21.36s/it]   16%|█▋        | 33/200 [11:41<58:45, 21.11s/it] 17%|█▋        | 34/200 [12:02<57:57, 20.95s/it] 18%|█▊        | 35/200 [12:22<57:08, 20.78s/it] 18%|█▊        | 36/200 [12:43<56:29, 20.67s/it] 18%|█▊        | 37/200 [13:03<56:00, 20.62s/it] 19%|█▉        | 38/200 [13:23<55:14, 20.46s/it] 20%|█▉        | 39/200 [13:43<54:41, 20.38s/it] 20%|██        | 40/200 [14:04<54:19, 20.37s/it] 20%|██        | 41/200 [14:24<53:47, 20.30s/it] 21%|██        | 42/200 [14:44<53:13, 20.21s/it] 22%|██▏       | 43/200 [15:04<52:42, 20.14s/it] 22%|██▏       | 44/200 [15:24<52:17, 20.11s/it] 22%|██▎       | 45/200 [15:44<51:50, 20.07s/it] 23%|██▎       | 46/200 [16:04<51:16, 19.98s/it] 24%|██▎       | 47/200 [16:23<50:43, 19.89s/it] 24%|██▍       | 48/200 [16:43<50:12, 19.82s/it] 24%|██▍       | 49/200 [17:03<49:45, 19.77s/it] 25%|██▌       | 50/200 [17:22<49:18, 19.72s/it] 26%|██▌       | 51/200 [17:42<48:56, 19.71s/it] 26%|██▌       | 52/200 [18:01<48:28, 19.65s/it] 26%|██▋       | 53/200 [18:21<48:01, 19.60s/it] 27%|██▋       | 54/200 [18:40<47:33, 19.55s/it] 28%|██▊       | 55/200 [19:00<47:06, 19.49s/it] 28%|██▊       | 56/200 [19:19<46:41, 19.45s/it] 28%|██▊       | 57/200 [19:38<46:14, 19.40s/it] 29%|██▉       | 58/200 [19:58<45:53, 19.39s/it] 30%|██▉       | 59/200 [20:17<45:27, 19.34s/it] 30%|███       | 60/200 [20:36<45:02, 19.30s/it] 30%|███       | 61/200 [20:55<44:34, 19.24s/it] 31%|███       | 62/200 [21:14<44:10, 19.21s/it] 32%|███▏      | 63/200 [21:34<43:50, 19.20s/it] 32%|███▏      | 64/200 [21:53<43:24, 19.15s/it] 32%|███▎      | 65/200 [22:12<43:06, 19.16s/it] 33%|███▎      | 66/200 [22:31<42:49, 19.17s/it] 34%|███▎      | 67/200 [22:50<42:22, 19.11s/it] 34%|███▍      | 68/200 [23:09<41:58, 19.08s/it] 34%|███▍      | 69/200 [23:28<41:30, 19.01s/it] 35%|███▌      | 70/200 [23:47<41:05, 18.97s/it] 36%|███▌      | 71/200 [24:06<40:43, 18.94s/it] 36%|███▌      | 72/200 [24:24<40:18, 18.90s/it] 36%|███▋      | 73/200 [24:43<39:52, 18.84s/it] 37%|███▋      | 74/200 [25:02<39:29, 18.80s/it] 38%|███▊      | 75/200 [25:21<39:08, 18.79s/it] 38%|███▊      | 76/200 [25:39<38:50, 18.80s/it] 38%|███▊      | 77/200 [25:58<38:37, 18.84s/it] 39%|███▉      | 78/200 [26:17<38:16, 18.82s/it] 40%|███▉      | 79/200 [26:36<37:48, 18.75s/it] 40%|████      | 80/200 [26:54<37:28, 18.74s/it] 40%|████      | 81/200 [27:13<37:09, 18.73s/it] 41%|████      | 82/200 [27:32<36:45, 18.69s/it] 42%|████▏     | 83/200 [27:50<36:22, 18.65s/it] 42%|████▏     | 84/200 [28:09<36:01, 18.63s/it] 42%|████▎     | 85/200 [28:27<35:39, 18.60s/it] 43%|████▎     | 86/200 [28:46<35:18, 18.58s/it] 44%|████▎     | 87/200 [29:04<34:57, 18.56s/it] 44%|████▍     | 88/200 [29:23<34:34, 18.52s/it] 44%|████▍     | 89/200 [29:41<34:13, 18.50s/it] 45%|████▌     | 90/200 [30:00<33:55, 18.50s/it] 46%|████▌     | 91/200 [30:18<33:34, 18.49s/it] 46%|████▌     | 92/200 [30:37<33:18, 18.51s/it] 46%|████▋     | 93/200 [30:55<32:58, 18.49s/it] 47%|████▋     | 94/200 [31:14<32:39, 18.48s/it] 48%|████▊     | 95/200 [31:32<32:16, 18.45s/it] 48%|████▊     | 96/200 [31:50<31:54, 18.40s/it] 48%|████▊     | 97/200 [32:09<31:31, 18.36s/it] 49%|████▉     | 98/200 [32:27<31:11, 18.34s/it] 50%|████▉     | 99/200 [32:45<30:55, 18.37s/it] 50%|█████     | 100/200 [33:04<30:33, 18.34s/it] 50%|█████     | 101/200 [33:22<30:11, 18.30s/it] 51%|█████     | 102/200 [33:40<29:52, 18.29s/it] 52%|█████▏    | 103/200 [33:58<29:30, 18.25s/it] 52%|█████▏    | 104/200 [34:16<29:11, 18.25s/it] 52%|█████▎    | 105/200 [34:35<28:52, 18.23s/it] 53%|█████▎    | 106/200 [34:53<28:32, 18.22s/it] 54%|█████▎    | 107/200 [35:11<28:12, 18.19s/it] 54%|█████▍    | 108/200 [35:29<27:53, 18.19s/it] 55%|█████▍    | 109/200 [35:47<27:32, 18.16s/it] 55%|█████▌    | 110/200 [36:05<27:13, 18.15s/it] 56%|█████▌    | 111/200 [36:23<26:53, 18.12s/it] 56%|█████▌    | 112/200 [36:42<26:33, 18.11s/it] 56%|█████▋    | 113/200 [37:00<26:16, 18.12s/it] 57%|█████▋    | 114/200 [37:18<25:57, 18.12s/it] 57%|█████▊    | 115/200 [37:36<25:40, 18.12s/it] 58%|█████▊    | 116/200 [37:54<25:22, 18.12s/it] 58%|█████▊    | 117/200 [38:12<25:02, 18.10s/it] 59%|█████▉    | 118/200 [38:30<24:42, 18.08s/it] 60%|█████▉    | 119/200 [38:48<24:23, 18.07s/it] 60%|██████    | 120/200 [39:06<24:04, 18.05s/it] 60%|██████    | 121/200 [39:24<23:45, 18.05s/it] 61%|██████    | 122/200 [39:42<23:27, 18.04s/it] 62%|██████▏   | 123/200 [40:00<23:08, 18.03s/it] 62%|██████▏   | 124/200 [40:18<22:49, 18.02s/it] 62%|██████▎   | 125/200 [40:36<22:31, 18.02s/it] 63%|██████▎   | 126/200 [40:54<22:11, 17.99s/it] 64%|██████▎   | 127/200 [41:12<21:50, 17.95s/it] 64%|██████▍   | 128/200 [41:30<21:31, 17.93s/it] 64%|██████▍   | 129/200 [41:48<21:10, 17.89s/it] 65%|██████▌   | 130/200 [42:06<20:54, 17.93s/it] 66%|██████▌   | 131/200 [42:24<20:35, 17.91s/it] 66%|██████▌   | 132/200 [42:42<20:18, 17.92s/it] 66%|██████▋   | 133/200 [42:59<20:00, 17.92s/it] 67%|██████▋   | 134/200 [43:17<19:42, 17.92s/it] 68%|██████▊   | 135/200 [43:35<19:23, 17.91s/it] 68%|██████▊   | 136/200 [43:53<19:06, 17.91s/it] 68%|██████▊   | 137/200 [44:11<18:47, 17.90s/it] 69%|██████▉   | 138/200 [44:29<18:29, 17.90s/it] 70%|██████▉   | 139/200 [44:47<18:11, 17.90s/it] 70%|███████   | 140/200 [45:05<17:53, 17.90s/it] 70%|███████   | 141/200 [45:23<17:36, 17.90s/it] 71%|███████   | 142/200 [45:41<17:17, 17.89s/it] 72%|███████▏  | 143/200 [45:58<16:59, 17.89s/it] 72%|███████▏  | 144/200 [46:16<16:41, 17.89s/it] 72%|███████▎  | 145/200 [46:34<16:24, 17.89s/it] 73%|███████▎  | 146/200 [46:52<16:05, 17.88s/it] 74%|███████▎  | 147/200 [47:10<15:48, 17.89s/it] 74%|███████▍  | 148/200 [47:28<15:29, 17.88s/it] 74%|███████▍  | 149/200 [47:46<15:11, 17.87s/it] 75%|███████▌  | 150/200 [48:04<14:53, 17.87s/it] 76%|███████▌  | 151/200 [48:21<14:35, 17.86s/it] 76%|███████▌  | 152/200 [48:39<14:17, 17.86s/it] 76%|███████▋  | 153/200 [48:57<13:59, 17.87s/it] 77%|███████▋  | 154/200 [49:15<13:42, 17.88s/it] 78%|███████▊  | 155/200 [49:33<13:24, 17.88s/it] 78%|███████▊  | 156/200 [49:51<13:06, 17.88s/it] 78%|███████▊  | 157/200 [50:09<12:48, 17.88s/it] 79%|███████▉  | 158/200 [50:27<12:30, 17.88s/it] 80%|███████▉  | 159/200 [50:44<12:12, 17.88s/it] 80%|████████  | 160/200 [51:02<11:55, 17.88s/it] 80%|████████  | 161/200 [51:20<11:37, 17.89s/it] 81%|████████  | 162/200 [51:38<11:19, 17.88s/it] 82%|████████▏ | 163/200 [51:56<11:01, 17.88s/it] 82%|████████▏ | 164/200 [52:14<10:43, 17.89s/it] 82%|████████▎ | 165/200 [52:32<10:26, 17.89s/it] 83%|████████▎ | 166/200 [52:50<10:07, 17.88s/it] 84%|████████▎ | 167/200 [53:08<09:50, 17.89s/it] 84%|████████▍ | 168/200 [53:25<09:31, 17.87s/it] 84%|████████▍ | 169/200 [53:43<09:13, 17.87s/it] 85%|████████▌ | 170/200 [54:01<08:56, 17.87s/it] 86%|████████▌ | 171/200 [54:19<08:37, 17.86s/it] 86%|████████▌ | 172/200 [54:37<08:20, 17.86s/it] 86%|████████▋ | 173/200 [54:55<08:02, 17.87s/it] 87%|████████▋ | 174/200 [55:13<07:44, 17.88s/it] 88%|████████▊ | 175/200 [55:30<07:26, 17.88s/it] 88%|████████▊ | 176/200 [55:48<07:08, 17.87s/it] 88%|████████▊ | 177/200 [56:06<06:51, 17.87s/it] 89%|████████▉ | 178/200 [56:24<06:33, 17.87s/it] 90%|████████▉ | 179/200 [56:42<06:15, 17.86s/it] 90%|█████████ | 180/200 [57:00<05:57, 17.87s/it] 90%|█████████ | 181/200 [57:18<05:39, 17.87s/it] 91%|█████████ | 182/200 [57:36<05:21, 17.87s/it] 92%|█████████▏| 183/200 [57:53<05:03, 17.88s/it] 92%|█████████▏| 184/200 [58:11<04:46, 17.88s/it] 92%|█████████▎| 185/200 [58:29<04:27, 17.85s/it] 93%|█████████▎| 186/200 [58:47<04:09, 17.82s/it] 94%|█████████▎| 187/200 [59:05<03:51, 17.80s/it] 94%|█████████▍| 188/200 [59:22<03:33, 17.79s/it] 94%|█████████▍| 189/200 [59:40<03:15, 17.78s/it] 95%|█████████▌| 190/200 [59:58<02:57, 17.79s/it] 96%|█████████▌| 191/200 [1:00:16<02:40, 17.81s/it] 96%|█████████▌| 192/200 [1:00:34<02:22, 17.83s/it] 96%|█████████▋| 193/200 [1:00:52<02:05, 17.86s/it] 97%|█████████▋| 194/200 [1:01:09<01:47, 17.87s/it] 98%|█████████▊| 195/200 [1:01:27<01:29, 17.84s/it] 98%|█████████▊| 196/200 [1:01:45<01:11, 17.82s/it] 98%|█████████▊| 197/200 [1:02:03<00:53, 17.79s/it] 99%|█████████▉| 198/200 [1:02:20<00:35, 17.78s/it]100%|█████████▉| 199/200 [1:02:38<00:17, 17.72s/it]100%|██████████| 200/200 [1:02:56<00:00, 17.67s/it]100%|██████████| 200/200 [1:02:56<00:00, 18.88s/it]
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10104317611219303
+Global Trainning Loss: 2.3028397512435914
+Global test accurancy: 0.10133355773381743
+Global test_loss: 2.3028610801696776
+Global Precision: 0.011357498819518608
+Global Recall: 0.10133355773381743
+Global f1score: 0.02013507957645835
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10107301640076644
+Global Trainning Loss: 2.3023326110839846
+Global test accurancy: 0.10142263804631288
+Global test_loss: 2.302366256713867
+Global Precision: 0.018028186715021217
+Global Recall: 0.10142263804631288
+Global f1score: 0.02045750809675151
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10856296211284605
+Global Trainning Loss: 2.301819610595703
+Global test accurancy: 0.10946790807664364
+Global test_loss: 2.301868743896484
+Global Precision: 0.04389710483745707
+Global Recall: 0.10946790807664364
+Global f1score: 0.03973962814848832
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.15113897856557842
+Global Trainning Loss: 2.301268153190613
+Global test accurancy: 0.15129713123269856
+Global test_loss: 2.301335082054138
+Global Precision: 0.05236452061322264
+Global Recall: 0.15129713123269856
+Global f1score: 0.07419687682897601
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.1502390352703073
+Global Trainning Loss: 2.3006381797790527
+Global test accurancy: 0.15071536000411465
+Global test_loss: 2.3007245683670043
+Global Precision: 0.06251374049600379
+Global Recall: 0.15071536000411465
+Global f1score: 0.0744702631342737
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.13146503278428948
+Global Trainning Loss: 2.299947462081909
+Global test accurancy: 0.12920362451893208
+Global test_loss: 2.300055022239685
+Global Precision: 0.06767388681844703
+Global Recall: 0.12920362451893208
+Global f1score: 0.05402225739825666
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.11904569577494073
+Global Trainning Loss: 2.299230842590332
+Global test accurancy: 0.1174431148568859
+Global test_loss: 2.299357123374939
+Global Precision: 0.05267775622304105
+Global Recall: 0.1174431148568859
+Global f1score: 0.042229732851161134
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.11281597772732035
+Global Trainning Loss: 2.298434715270996
+Global test accurancy: 0.11171941860079929
+Global test_loss: 2.2985741758346556
+Global Precision: 0.04863101448283299
+Global Recall: 0.11171941860079929
+Global f1score: 0.03472804467377828
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10884893948112606
+Global Trainning Loss: 2.297490983009338
+Global test accurancy: 0.10896990315847964
+Global test_loss: 2.29764497756958
+Global Precision: 0.05825620403570677
+Global Recall: 0.10896990315847964
+Global f1score: 0.03050723145683023
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10635126994811961
+Global Trainning Loss: 2.2963851737976073
+Global test accurancy: 0.1070292302825099
+Global test_loss: 2.296557750701904
+Global Precision: 0.05660577715972037
+Global Recall: 0.1070292302825099
+Global f1score: 0.02703528539836851
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.1059791072244161
+Global Trainning Loss: 2.2950408840179444
+Global test accurancy: 0.10659487262478343
+Global test_loss: 2.295230803489685
+Global Precision: 0.054784524847715156
+Global Recall: 0.10659487262478343
+Global f1score: 0.02629199274192988
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.10729822518567894
+Global Trainning Loss: 2.2933701992034914
+Global test accurancy: 0.10812737259879025
+Global test_loss: 2.293584303855896
+Global Precision: 0.06698673691441988
+Global Recall: 0.10812737259879025
+Global f1score: 0.02901386530011261
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.11482877784667364
+Global Trainning Loss: 2.2912530279159546
+Global test accurancy: 0.11335681925850721
+Global test_loss: 2.291491680145264
+Global Precision: 0.09724230783798855
+Global Recall: 0.11335681925850721
+Global f1score: 0.03910158381528315
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.13798267609945855
+Global Trainning Loss: 2.2885193634033203
+Global test accurancy: 0.13889060373483966
+Global test_loss: 2.2887871170043947
+Global Precision: 0.1293593383637376
+Global Recall: 0.13889060373483966
+Global f1score: 0.07843982751728999
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.16389164982666932
+Global Trainning Loss: 2.284935483932495
+Global test accurancy: 0.16445110935511129
+Global test_loss: 2.2852517795562743
+Global Precision: 0.17017969103468453
+Global Recall: 0.16445110935511129
+Global f1score: 0.10748582481184756
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.1873204135874362
+Global Trainning Loss: 2.2801498889923097
+Global test accurancy: 0.1867659550188692
+Global test_loss: 2.280532202720642
+Global Precision: 0.15690933853737396
+Global Recall: 0.1867659550188692
+Global f1score: 0.13010427896269333
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.1963895381966488
+Global Trainning Loss: 2.273570079803467
+Global test accurancy: 0.19480075065453656
+Global test_loss: 2.274033031463623
+Global Precision: 0.1680351834007906
+Global Recall: 0.19480075065453656
+Global f1score: 0.14077334070832875
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.20182129063389748
+Global Trainning Loss: 2.2643554162979127
+Global test accurancy: 0.20023556404059265
+Global test_loss: 2.2649362754821776
+Global Precision: 0.16891881254627114
+Global Recall: 0.20023556404059265
+Global f1score: 0.15099379251253786
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.20479821999583112
+Global Trainning Loss: 2.251854362487793
+Global test accurancy: 0.2009312666673127
+Global test_loss: 2.25259211063385
+Global Precision: 0.18106785084268895
+Global Recall: 0.2009312666673127
+Global f1score: 0.15399265704408896
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.20512287099303034
+Global Trainning Loss: 2.2359490060806273
+Global test accurancy: 0.2005412032005115
+Global test_loss: 2.2368690538406373
+Global Precision: 0.18738793831112427
+Global Recall: 0.2005412032005115
+Global f1score: 0.15351158528186293
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.20699484433258122
+Global Trainning Loss: 2.217981872558594
+Global test accurancy: 0.2057901213727397
+Global test_loss: 2.219113283157349
+Global Precision: 0.1953241684562705
+Global Recall: 0.2057901213727397
+Global f1score: 0.16122325100872492
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.21278283568948758
+Global Trainning Loss: 2.2000996255874634
+Global test accurancy: 0.21173444683141904
+Global test_loss: 2.201507959365845
+Global Precision: 0.20066944953796315
+Global Recall: 0.21173444683141904
+Global f1score: 0.17224115312838856
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.21848840269398803
+Global Trainning Loss: 2.183601803779602
+Global test accurancy: 0.21772260186864378
+Global test_loss: 2.18534707069397
+Global Precision: 0.20549343445505205
+Global Recall: 0.21772260186864378
+Global f1score: 0.1811959011176824
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.22605712540879425
+Global Trainning Loss: 2.168504376411438
+Global test accurancy: 0.2233694521882259
+Global test_loss: 2.17065860748291
+Global Precision: 0.21246842982804712
+Global Recall: 0.2233694521882259
+Global f1score: 0.1884081877559351
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.23115854394790977
+Global Trainning Loss: 2.154642677307129
+Global test accurancy: 0.22440101454651304
+Global test_loss: 2.157276291847229
+Global Precision: 0.21376564277689453
+Global Recall: 0.22440101454651304
+Global f1score: 0.19037057454081252
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2346018380549163
+Global Trainning Loss: 2.1417863178253174
+Global test accurancy: 0.22919061761173076
+Global test_loss: 2.1449953365325927
+Global Precision: 0.21538893796022635
+Global Recall: 0.22919061761173076
+Global f1score: 0.1953378417191027
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2380881031005132
+Global Trainning Loss: 2.129767503738403
+Global test accurancy: 0.23291799320742446
+Global test_loss: 2.1336020612716675
+Global Precision: 0.21652549493602144
+Global Recall: 0.23291799320742446
+Global f1score: 0.19888769246744864
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.24141485828339962
+Global Trainning Loss: 2.1183915090560914
+Global test accurancy: 0.23637032119583234
+Global test_loss: 2.1228553438186646
+Global Precision: 0.2222662593856106
+Global Recall: 0.23637032119583234
+Global f1score: 0.20281056982973744
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.24538369971745344
+Global Trainning Loss: 2.107547264099121
+Global test accurancy: 0.24213333203236
+Global test_loss: 2.1126168537139893
+Global Precision: 0.23146287326520174
+Global Recall: 0.24213333203236
+Global f1score: 0.20870311212115542
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2501956162867916
+Global Trainning Loss: 2.097206039428711
+Global test accurancy: 0.2475602240532537
+Global test_loss: 2.1028322982788086
+Global Precision: 0.23241445211966025
+Global Recall: 0.2475602240532537
+Global f1score: 0.21445444470224215
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2552358965707777
+Global Trainning Loss: 2.087300114631653
+Global test accurancy: 0.2539387144608865
+Global test_loss: 2.093387732505798
+Global Precision: 0.2542090311444899
+Global Recall: 0.2539387144608865
+Global f1score: 0.22134000809272572
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.26064844841640333
+Global Trainning Loss: 2.0777930307388304
+Global test accurancy: 0.2579841826393572
+Global test_loss: 2.0842388343811034
+Global Precision: 0.2619206603873503
+Global Recall: 0.2579841826393572
+Global f1score: 0.22596136304110168
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2666035609693794
+Global Trainning Loss: 2.068571858406067
+Global test accurancy: 0.2648409084441053
+Global test_loss: 2.0752809929847715
+Global Precision: 0.27406449252308157
+Global Recall: 0.2648409084441053
+Global f1score: 0.23348696173084535
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.27135934930174266
+Global Trainning Loss: 2.059601867198944
+Global test accurancy: 0.27066803371758874
+Global test_loss: 2.0664546585083006
+Global Precision: 0.28576017975987866
+Global Recall: 0.27066803371758874
+Global f1score: 0.2406363589845673
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2766011559460501
+Global Trainning Loss: 2.050830717086792
+Global test accurancy: 0.27414138336438015
+Global test_loss: 2.0577281308174133
+Global Precision: 0.28817596862336775
+Global Recall: 0.27414138336438015
+Global f1score: 0.24545993082516612
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2812908600891525
+Global Trainning Loss: 2.0422253131866457
+Global test accurancy: 0.2792329572248164
+Global test_loss: 2.0491010427474974
+Global Precision: 0.29175219144246106
+Global Recall: 0.2792329572248164
+Global f1score: 0.25231624027649624
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.28630526766346176
+Global Trainning Loss: 2.033751151561737
+Global test accurancy: 0.28476919160231173
+Global test_loss: 2.040574095249176
+Global Precision: 0.2968163915697064
+Global Recall: 0.28476919160231173
+Global f1score: 0.2598251974885449
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2905630843031015
+Global Trainning Loss: 2.0253923416137694
+Global test accurancy: 0.2900629979427658
+Global test_loss: 2.0321255826950075
+Global Precision: 0.3013530388602019
+Global Recall: 0.2900629979427658
+Global f1score: 0.26658649378273114
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.29388121589858696
+Global Trainning Loss: 2.0171955180168153
+Global test accurancy: 0.2937339556023518
+Global test_loss: 2.023811240196228
+Global Precision: 0.31103072194482795
+Global Recall: 0.2937339556023518
+Global f1score: 0.2721577849976256
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.2974921717549696
+Global Trainning Loss: 2.0091783380508423
+Global test accurancy: 0.29800076957606314
+Global test_loss: 2.015632724761963
+Global Precision: 0.31465302417575464
+Global Recall: 0.29800076957606314
+Global f1score: 0.27771844667544127
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3012157432142023
+Global Trainning Loss: 2.0013893389701845
+Global test accurancy: 0.30216614390072927
+Global test_loss: 2.0076893901824953
+Global Precision: 0.31618204049528115
+Global Recall: 0.30216614390072927
+Global f1score: 0.28309169511931254
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.305247294469927
+Global Trainning Loss: 1.9937861561775208
+Global test accurancy: 0.30569976551269185
+Global test_loss: 1.999899230003357
+Global Precision: 0.32111578362782794
+Global Recall: 0.30569976551269185
+Global f1score: 0.28771820122956016
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.30818492362580663
+Global Trainning Loss: 1.9863193678855895
+Global test accurancy: 0.3082276274080783
+Global test_loss: 1.9922948837280274
+Global Precision: 0.32176345699918935
+Global Recall: 0.3082276274080783
+Global f1score: 0.2915040862139118
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3115755600183555
+Global Trainning Loss: 1.9789451622962952
+Global test accurancy: 0.3118585246787386
+Global test_loss: 1.9847800016403199
+Global Precision: 0.3228690333522141
+Global Recall: 0.3118585246787386
+Global f1score: 0.2957594782690697
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3151026207961421
+Global Trainning Loss: 1.9717071509361268
+Global test accurancy: 0.3150321997044494
+Global test_loss: 1.977349123954773
+Global Precision: 0.32482457410204824
+Global Recall: 0.3150321997044494
+Global f1score: 0.2993662290845575
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.31863490557275315
+Global Trainning Loss: 1.9646265149116515
+Global test accurancy: 0.31797547048567554
+Global test_loss: 1.9700610947608947
+Global Precision: 0.32691280065175665
+Global Recall: 0.31797547048567554
+Global f1score: 0.30348789133398635
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3215751949522242
+Global Trainning Loss: 1.9576731681823731
+Global test accurancy: 0.3212577281719867
+Global test_loss: 1.9628957748413085
+Global Precision: 0.3315607304874494
+Global Recall: 0.3212577281719867
+Global f1score: 0.307922398092819
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.32494337370041626
+Global Trainning Loss: 1.9508249545097351
+Global test accurancy: 0.32613147664999437
+Global test_loss: 1.9558437538146973
+Global Precision: 0.3371084709047305
+Global Recall: 0.32613147664999437
+Global f1score: 0.3139796877228247
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3270085925551454
+Global Trainning Loss: 1.9440384221076965
+Global test accurancy: 0.3303756597623625
+Global test_loss: 1.9488461685180665
+Global Precision: 0.3414155605315032
+Global Recall: 0.3303756597623625
+Global f1score: 0.3192440138123704
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3313087614647153
+Global Trainning Loss: 1.9373839092254639
+Global test accurancy: 0.3333655515031238
+Global test_loss: 1.941997573375702
+Global Precision: 0.3439261316645547
+Global Recall: 0.3333655515031238
+Global f1score: 0.32293110988116047
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3342884018042635
+Global Trainning Loss: 1.9308322811126708
+Global test accurancy: 0.33590525346652567
+Global test_loss: 1.9352838826179504
+Global Precision: 0.34600943864271316
+Global Recall: 0.33590525346652567
+Global f1score: 0.3262489761146404
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3374245482145202
+Global Trainning Loss: 1.9244255709648133
+Global test accurancy: 0.3380855789871478
+Global test_loss: 1.9287077379226685
+Global Precision: 0.34831690057295633
+Global Recall: 0.3380855789871478
+Global f1score: 0.32902668837851473
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3406877018912643
+Global Trainning Loss: 1.91813227891922
+Global test accurancy: 0.34091732530309476
+Global test_loss: 1.9222046971321105
+Global Precision: 0.3512996797835983
+Global Recall: 0.34091732530309476
+Global f1score: 0.3324524991321576
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3435958377524573
+Global Trainning Loss: 1.9119396448135375
+Global test accurancy: 0.34472759726484775
+Global test_loss: 1.9158257412910462
+Global Precision: 0.35469342080542154
+Global Recall: 0.34472759726484775
+Global f1score: 0.3367560851653729
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3462434126482057
+Global Trainning Loss: 1.905911295413971
+Global test accurancy: 0.34724759588178616
+Global test_loss: 1.9096625876426696
+Global Precision: 0.35633384823867226
+Global Recall: 0.34724759588178616
+Global f1score: 0.3397007304763213
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.34974393258949216
+Global Trainning Loss: 1.9000258040428162
+Global test accurancy: 0.3499379855634706
+Global test_loss: 1.9037413668632508
+Global Precision: 0.3590958646151779
+Global Recall: 0.3499379855634706
+Global f1score: 0.34279232051104597
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.35231602686311275
+Global Trainning Loss: 1.8943026685714721
+Global test accurancy: 0.3520225822701787
+Global test_loss: 1.8980070924758912
+Global Precision: 0.36076165678051597
+Global Recall: 0.3520225822701787
+Global f1score: 0.3451154971967013
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3549618477409475
+Global Trainning Loss: 1.8887856197357178
+Global test accurancy: 0.355002567798325
+Global test_loss: 1.8924882698059082
+Global Precision: 0.3636847187170843
+Global Recall: 0.355002567798325
+Global f1score: 0.3483839212256738
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3568794341924043
+Global Trainning Loss: 1.8834345030784607
+Global test accurancy: 0.3574612895431421
+Global test_loss: 1.8872302985191345
+Global Precision: 0.36580973669979044
+Global Recall: 0.3574612895431421
+Global f1score: 0.3511107225559339
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3599167538505867
+Global Trainning Loss: 1.8782446789741516
+Global test accurancy: 0.3604590914642529
+Global test_loss: 1.8821437788009643
+Global Precision: 0.36912901925549974
+Global Recall: 0.3604590914642529
+Global f1score: 0.3543948958121345
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3617672900446869
+Global Trainning Loss: 1.8732143568992614
+Global test accurancy: 0.36255435881547227
+Global test_loss: 1.8772899317741394
+Global Precision: 0.3712291039223678
+Global Recall: 0.36255435881547227
+Global f1score: 0.3567688005785014
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3639253254416532
+Global Trainning Loss: 1.8683131337165833
+Global test accurancy: 0.3648343490335663
+Global test_loss: 1.872572271823883
+Global Precision: 0.3730488912779374
+Global Recall: 0.3648343490335663
+Global f1score: 0.35915054301359933
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.36620779198516423
+Global Trainning Loss: 1.86355140209198
+Global test accurancy: 0.3666716693057222
+Global test_loss: 1.8680206727981568
+Global Precision: 0.3749841319587304
+Global Recall: 0.3666716693057222
+Global f1score: 0.361171139610111
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3682639253687069
+Global Trainning Loss: 1.8588547682762147
+Global test accurancy: 0.3691522024711245
+Global test_loss: 1.8636452174186706
+Global Precision: 0.3774576509244864
+Global Recall: 0.3691522024711245
+Global f1score: 0.3640183397199224
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3708838035440431
+Global Trainning Loss: 1.8542800188064574
+Global test accurancy: 0.3729461313936163
+Global test_loss: 1.8593439531326295
+Global Precision: 0.381133835960527
+Global Recall: 0.3729461313936163
+Global f1score: 0.3678931468893954
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.37324866217157937
+Global Trainning Loss: 1.8498118543624877
+Global test accurancy: 0.37532653813886846
+Global test_loss: 1.8551680517196656
+Global Precision: 0.3840871865485713
+Global Recall: 0.37532653813886846
+Global f1score: 0.3703725115266243
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.37530727860494795
+Global Trainning Loss: 1.8453695178031921
+Global test accurancy: 0.37679441284665655
+Global test_loss: 1.8510807371139526
+Global Precision: 0.38557560859427575
+Global Recall: 0.37679441284665655
+Global f1score: 0.37191204089801627
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.37783654664384325
+Global Trainning Loss: 1.8410610675811767
+Global test accurancy: 0.37823534916976026
+Global test_loss: 1.8471189475059508
+Global Precision: 0.38674960871693065
+Global Recall: 0.37823534916976026
+Global f1score: 0.3734174477312833
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.37988747695657243
+Global Trainning Loss: 1.836814556121826
+Global test accurancy: 0.3812788366452408
+Global test_loss: 1.8432444667816161
+Global Precision: 0.3898991135780555
+Global Recall: 0.3812788366452408
+Global f1score: 0.37653836535636576
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.38129476367618925
+Global Trainning Loss: 1.8326934313774108
+Global test accurancy: 0.38400033478296425
+Global test_loss: 1.8394659447669983
+Global Precision: 0.3928633337081501
+Global Recall: 0.38400033478296425
+Global f1score: 0.3794231365292594
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3830694548053745
+Global Trainning Loss: 1.8285576963424683
+Global test accurancy: 0.3862297383197538
+Global test_loss: 1.8357987213134765
+Global Precision: 0.3949749635922703
+Global Recall: 0.3862297383197538
+Global f1score: 0.38193307643119695
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.385327537559118
+Global Trainning Loss: 1.824496762752533
+Global test accurancy: 0.38837896792642324
+Global test_loss: 1.8321775698661804
+Global Precision: 0.3975054599253877
+Global Recall: 0.38837896792642324
+Global f1score: 0.384556858749075
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.38773383052439325
+Global Trainning Loss: 1.820498309135437
+Global test accurancy: 0.3894329774972738
+Global test_loss: 1.828598108291626
+Global Precision: 0.3982882671893496
+Global Recall: 0.3894329774972738
+Global f1score: 0.38540585240481584
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3897607560823176
+Global Trainning Loss: 1.816498167514801
+Global test accurancy: 0.3911009340832975
+Global test_loss: 1.825071988105774
+Global Precision: 0.40010570454027966
+Global Recall: 0.3911009340832975
+Global f1score: 0.38736306173848656
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.39142596431824594
+Global Trainning Loss: 1.8124947834014893
+Global test accurancy: 0.39375998211364605
+Global test_loss: 1.821579439640045
+Global Precision: 0.40268725357982427
+Global Recall: 0.39375998211364605
+Global f1score: 0.39006451128669567
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3929261198345104
+Global Trainning Loss: 1.8085639524459838
+Global test accurancy: 0.3943918946474045
+Global test_loss: 1.8181111001968384
+Global Precision: 0.40298872273161496
+Global Recall: 0.3943918946474045
+Global f1score: 0.3905347838630971
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3954835142593383
+Global Trainning Loss: 1.804657723903656
+Global test accurancy: 0.39564300062381075
+Global test_loss: 1.8147092938423157
+Global Precision: 0.40413016471514096
+Global Recall: 0.39564300062381075
+Global f1score: 0.39191671032515096
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.3983543071078948
+Global Trainning Loss: 1.8008206129074096
+Global test accurancy: 0.3970983997484411
+Global test_loss: 1.8114197301864623
+Global Precision: 0.4055342810886984
+Global Recall: 0.3970983997484411
+Global f1score: 0.39345192784441335
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.400257418075615
+Global Trainning Loss: 1.7969034314155579
+Global test accurancy: 0.39842156969918424
+Global test_loss: 1.8081173920631408
+Global Precision: 0.4065819469938006
+Global Recall: 0.39842156969918424
+Global f1score: 0.3948733073149798
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4024449376391918
+Global Trainning Loss: 1.7930802249908446
+Global test accurancy: 0.4001701379149059
+Global test_loss: 1.8048263573646546
+Global Precision: 0.40755081016697126
+Global Recall: 0.4001701379149059
+Global f1score: 0.39638984059271914
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.404527892432295
+Global Trainning Loss: 1.7891975855827331
+Global test accurancy: 0.4030513355639174
+Global test_loss: 1.8016024446487426
+Global Precision: 0.4103968264131924
+Global Recall: 0.4030513355639174
+Global f1score: 0.39936845299445145
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4068798420038901
+Global Trainning Loss: 1.7853843569755554
+Global test accurancy: 0.4051773044542788
+Global test_loss: 1.7984756326675415
+Global Precision: 0.4126066752867688
+Global Recall: 0.4051773044542788
+Global f1score: 0.4015553645858931
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4086182868581544
+Global Trainning Loss: 1.7814707803726195
+Global test accurancy: 0.4073886562135679
+Global test_loss: 1.7953109645843506
+Global Precision: 0.4149471040167929
+Global Recall: 0.4073886562135679
+Global f1score: 0.4038593052778828
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.41090066890033555
+Global Trainning Loss: 1.7776563024520875
+Global test accurancy: 0.40998882250336016
+Global test_loss: 1.7922048020362853
+Global Precision: 0.41746591674869826
+Global Recall: 0.40998882250336016
+Global f1score: 0.4063642918128625
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4131229626706718
+Global Trainning Loss: 1.773702838420868
+Global test accurancy: 0.413191226739573
+Global test_loss: 1.789070155620575
+Global Precision: 0.420229941771483
+Global Recall: 0.413191226739573
+Global f1score: 0.4097541514153675
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.41536702338063913
+Global Trainning Loss: 1.7698758101463319
+Global test accurancy: 0.41426913774132534
+Global test_loss: 1.78609370470047
+Global Precision: 0.4206888720724403
+Global Recall: 0.41426913774132534
+Global f1score: 0.41084950906176065
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.41803119699944674
+Global Trainning Loss: 1.766109824180603
+Global test accurancy: 0.41668794343574667
+Global test_loss: 1.7830595064163208
+Global Precision: 0.4233661528779858
+Global Recall: 0.41668794343574667
+Global f1score: 0.4133462227275559
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4198912071677275
+Global Trainning Loss: 1.7623945093154907
+Global test accurancy: 0.41779519193887893
+Global test_loss: 1.7802337002754212
+Global Precision: 0.4240626606280684
+Global Recall: 0.41779519193887893
+Global f1score: 0.4145391093901233
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4213351563438016
+Global Trainning Loss: 1.758688943386078
+Global test accurancy: 0.4190734579901055
+Global test_loss: 1.777352204322815
+Global Precision: 0.4249474367577623
+Global Recall: 0.4190734579901055
+Global f1score: 0.4157042133807693
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.42381806187658183
+Global Trainning Loss: 1.7550828385353088
+Global test accurancy: 0.4196416877139024
+Global test_loss: 1.7746511840820312
+Global Precision: 0.4252847332832625
+Global Recall: 0.4196416877139024
+Global f1score: 0.4161091602774724
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.42530960832629583
+Global Trainning Loss: 1.7513212442398072
+Global test accurancy: 0.4213965874529781
+Global test_loss: 1.7718308067321777
+Global Precision: 0.42681484816206433
+Global Recall: 0.4213965874529781
+Global f1score: 0.41786025578089125
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.42624265097230923
+Global Trainning Loss: 1.7476030993461609
+Global test accurancy: 0.42190968067524753
+Global test_loss: 1.7690837121009826
+Global Precision: 0.42712135617283353
+Global Recall: 0.42190968067524753
+Global f1score: 0.4183315711622675
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.42842934719322884
+Global Trainning Loss: 1.7443031883239746
+Global test accurancy: 0.4228234167017664
+Global test_loss: 1.7666247606277465
+Global Precision: 0.42732144952746137
+Global Recall: 0.4228234167017664
+Global f1score: 0.4187187382541381
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4297337738008662
+Global Trainning Loss: 1.7407921004295348
+Global test accurancy: 0.42337758690520816
+Global test_loss: 1.76414452791214
+Global Precision: 0.4276056347436881
+Global Recall: 0.42337758690520816
+Global f1score: 0.4193941581194187
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.43087215456923883
+Global Trainning Loss: 1.7368930459022522
+Global test accurancy: 0.42476597862086307
+Global test_loss: 1.761408145427704
+Global Precision: 0.4292798093945725
+Global Recall: 0.42476597862086307
+Global f1score: 0.42102167769039794
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.43262984701928725
+Global Trainning Loss: 1.7332635498046876
+Global test accurancy: 0.4269415488690017
+Global test_loss: 1.7589491724967956
+Global Precision: 0.4321780095676098
+Global Recall: 0.4269415488690017
+Global f1score: 0.423536838454482
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4342062811819199
+Global Trainning Loss: 1.7297660446166991
+Global test accurancy: 0.4286159873645078
+Global test_loss: 1.756638870239258
+Global Precision: 0.4340390076097141
+Global Recall: 0.4286159873645078
+Global f1score: 0.4253128164593903
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4364200385771382
+Global Trainning Loss: 1.7262559151649475
+Global test accurancy: 0.42991333582900226
+Global test_loss: 1.7542588353157043
+Global Precision: 0.4353149319685146
+Global Recall: 0.42991333582900226
+Global f1score: 0.4265172947302929
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4378201622890381
+Global Trainning Loss: 1.7228532767295837
+Global test accurancy: 0.43159234066353597
+Global test_loss: 1.7522671437263488
+Global Precision: 0.43747034736050255
+Global Recall: 0.43159234066353597
+Global f1score: 0.42859348309548395
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4396889707567055
+Global Trainning Loss: 1.7192562985420228
+Global test accurancy: 0.4319669246863416
+Global test_loss: 1.7499531745910644
+Global Precision: 0.4372596740767862
+Global Recall: 0.4319669246863416
+Global f1score: 0.42863593675055534
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4407092534714562
+Global Trainning Loss: 1.7158047986030578
+Global test accurancy: 0.4333398229266015
+Global test_loss: 1.7480104923248292
+Global Precision: 0.43901730614109463
+Global Recall: 0.4333398229266015
+Global f1score: 0.43022445678674764
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4426191526787791
+Global Trainning Loss: 1.712718985080719
+Global test accurancy: 0.4332472947803935
+Global test_loss: 1.7463782835006714
+Global Precision: 0.438624407620665
+Global Recall: 0.4332472947803935
+Global f1score: 0.4297520402970662
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.44422953684232325
+Global Trainning Loss: 1.7089650201797486
+Global test accurancy: 0.4345934026002166
+Global test_loss: 1.7442191457748413
+Global Precision: 0.44029258366562396
+Global Recall: 0.4345934026002166
+Global f1score: 0.43111576037128574
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4465751650553472
+Global Trainning Loss: 1.7054982852935792
+Global test accurancy: 0.4361221026493213
+Global test_loss: 1.7425230026245118
+Global Precision: 0.44186075607425823
+Global Recall: 0.4361221026493213
+Global f1score: 0.4330442189375317
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.44798138894604356
+Global Trainning Loss: 1.7019237112998962
+Global test accurancy: 0.43662168366948223
+Global test_loss: 1.7405734634399415
+Global Precision: 0.44168559401429835
+Global Recall: 0.43662168366948223
+Global f1score: 0.43306138439900305
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4502931471821657
+Global Trainning Loss: 1.6985524582862854
+Global test accurancy: 0.4369280998498279
+Global test_loss: 1.7388787698745727
+Global Precision: 0.44203411765461553
+Global Recall: 0.4369280998498279
+Global f1score: 0.433616290105555
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4517497875283832
+Global Trainning Loss: 1.6950094723701477
+Global test accurancy: 0.43852435552263475
+Global test_loss: 1.7371096849441527
+Global Precision: 0.4436616819001698
+Global Recall: 0.43852435552263475
+Global f1score: 0.4353093863305958
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4531334365259479
+Global Trainning Loss: 1.6917274498939514
+Global test accurancy: 0.4392363024345423
+Global test_loss: 1.735614058971405
+Global Precision: 0.44425859915452065
+Global Recall: 0.4392363024345423
+Global f1score: 0.4356638889532951
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.45478460442291146
+Global Trainning Loss: 1.6882906007766723
+Global test accurancy: 0.43958506708901285
+Global test_loss: 1.7340671372413636
+Global Precision: 0.44479673558014027
+Global Recall: 0.43958506708901285
+Global f1score: 0.4363889220464321
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.456525115159971
+Global Trainning Loss: 1.684973201751709
+Global test accurancy: 0.44153661128137234
+Global test_loss: 1.7326694679260255
+Global Precision: 0.4469277181041532
+Global Recall: 0.44153661128137234
+Global f1score: 0.4383435962564268
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.457665586893755
+Global Trainning Loss: 1.682196238040924
+Global test accurancy: 0.4408648011209635
+Global test_loss: 1.7317203998565673
+Global Precision: 0.44701728274955294
+Global Recall: 0.4408648011209635
+Global f1score: 0.4378701201704779
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4604034409336942
+Global Trainning Loss: 1.6778384566307067
+Global test accurancy: 0.4434305878252894
+Global test_loss: 1.729342041015625
+Global Precision: 0.4490956436422355
+Global Recall: 0.4434305878252894
+Global f1score: 0.44055542990102103
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4622652251131586
+Global Trainning Loss: 1.6746837162971497
+Global test accurancy: 0.44313183742023055
+Global test_loss: 1.727912027835846
+Global Precision: 0.448788618567024
+Global Recall: 0.44313183742023055
+Global f1score: 0.4400947407000565
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4643024545703657
+Global Trainning Loss: 1.6710710525512695
+Global test accurancy: 0.4443997270096905
+Global test_loss: 1.726394636631012
+Global Precision: 0.4495614556977332
+Global Recall: 0.4443997270096905
+Global f1score: 0.4412573658052365
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4653553960487288
+Global Trainning Loss: 1.6678914165496825
+Global test accurancy: 0.4468111947787964
+Global test_loss: 1.725098843574524
+Global Precision: 0.4525830623878075
+Global Recall: 0.4468111947787964
+Global f1score: 0.4438024130406429
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.46705665891517395
+Global Trainning Loss: 1.6646574640274048
+Global test accurancy: 0.44722714991347157
+Global test_loss: 1.7240722513198852
+Global Precision: 0.4526624308650601
+Global Recall: 0.44722714991347157
+Global f1score: 0.4444339913006508
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4688080378067205
+Global Trainning Loss: 1.6609038376808167
+Global test accurancy: 0.44981293362821906
+Global test_loss: 1.7225166249275208
+Global Precision: 0.45510638758702526
+Global Recall: 0.44981293362821906
+Global f1score: 0.4467011277139816
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.47015945303801654
+Global Trainning Loss: 1.6574062132835388
+Global test accurancy: 0.4511112795076391
+Global test_loss: 1.7214210414886475
+Global Precision: 0.45587963503914913
+Global Recall: 0.4511112795076391
+Global f1score: 0.44777271444212846
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.47200347324220726
+Global Trainning Loss: 1.6536242771148681
+Global test accurancy: 0.45277550786867865
+Global test_loss: 1.720276346206665
+Global Precision: 0.45849056870966093
+Global Recall: 0.45277550786867865
+Global f1score: 0.45008649159040015
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4728395127368611
+Global Trainning Loss: 1.6503631258010865
+Global test accurancy: 0.45436924305160437
+Global test_loss: 1.7195676517486573
+Global Precision: 0.46066064490395114
+Global Recall: 0.45436924305160437
+Global f1score: 0.4521319115239128
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.47507406173784167
+Global Trainning Loss: 1.646387872695923
+Global test accurancy: 0.45590912728636507
+Global test_loss: 1.7184382319450378
+Global Precision: 0.46178057228949815
+Global Recall: 0.45590912728636507
+Global f1score: 0.4534842070655995
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.47543586672088783
+Global Trainning Loss: 1.642733039855957
+Global test accurancy: 0.45646176440943176
+Global test_loss: 1.7176923990249633
+Global Precision: 0.46307829564574565
+Global Recall: 0.45646176440943176
+Global f1score: 0.4545087451375016
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4769579158150565
+Global Trainning Loss: 1.6387520909309388
+Global test accurancy: 0.4572575929721352
+Global test_loss: 1.716729347705841
+Global Precision: 0.4642652119790535
+Global Recall: 0.4572575929721352
+Global f1score: 0.4555821888451938
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4780938262721526
+Global Trainning Loss: 1.635364112854004
+Global test accurancy: 0.45781608011788827
+Global test_loss: 1.7165012550354004
+Global Precision: 0.4646988651917653
+Global Recall: 0.45781608011788827
+Global f1score: 0.455771372095271
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4799089701172733
+Global Trainning Loss: 1.6317078280448913
+Global test accurancy: 0.45815961464961535
+Global test_loss: 1.7156358718872071
+Global Precision: 0.46520518197482086
+Global Recall: 0.45815961464961535
+Global f1score: 0.45638666415090995
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.48169377084622805
+Global Trainning Loss: 1.6276570796966552
+Global test accurancy: 0.4570290929123755
+Global test_loss: 1.7147093558311461
+Global Precision: 0.4641482887840775
+Global Recall: 0.4570290929123755
+Global f1score: 0.45524596805059925
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4832544898127691
+Global Trainning Loss: 1.6241367769241333
+Global test accurancy: 0.45806580349661646
+Global test_loss: 1.714757535457611
+Global Precision: 0.4642130379827661
+Global Recall: 0.45806580349661646
+Global f1score: 0.4557438730548859
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.48513142596369474
+Global Trainning Loss: 1.6198845672607423
+Global test accurancy: 0.4593389495956095
+Global test_loss: 1.7137694454193115
+Global Precision: 0.4652815851622719
+Global Recall: 0.4593389495956095
+Global f1score: 0.45701982492889265
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.48653301033382423
+Global Trainning Loss: 1.6167270421981812
+Global test accurancy: 0.4582939315702011
+Global test_loss: 1.7141976237297059
+Global Precision: 0.46437039450022227
+Global Recall: 0.4582939315702011
+Global f1score: 0.45575592844748114
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4881417771160346
+Global Trainning Loss: 1.6129430747032165
+Global test accurancy: 0.46056804131881834
+Global test_loss: 1.7146678733825684
+Global Precision: 0.4676559656071436
+Global Recall: 0.46056804131881834
+Global f1score: 0.45878644912668837
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.48926489764464337
+Global Trainning Loss: 1.6099822425842285
+Global test accurancy: 0.46051005190868166
+Global test_loss: 1.7156487607955933
+Global Precision: 0.4677151133476436
+Global Recall: 0.46051005190868166
+Global f1score: 0.4591450088004771
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.49048932501065196
+Global Trainning Loss: 1.6052696561813355
+Global test accurancy: 0.4616034033555185
+Global test_loss: 1.7147412419319152
+Global Precision: 0.46804210570044164
+Global Recall: 0.4616034033555185
+Global f1score: 0.45974414496175975
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4924939913564177
+Global Trainning Loss: 1.6023777937889099
+Global test accurancy: 0.46291417570049515
+Global test_loss: 1.7155785179138183
+Global Precision: 0.4699608642858799
+Global Recall: 0.46291417570049515
+Global f1score: 0.46075708573825697
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.493679227839841
+Global Trainning Loss: 1.5975012707710265
+Global test accurancy: 0.4631001817591568
+Global test_loss: 1.7149705410003662
+Global Precision: 0.4691269603626245
+Global Recall: 0.4631001817591568
+Global f1score: 0.46059555056843243
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4947905460698995
+Global Trainning Loss: 1.5943311977386474
+Global test accurancy: 0.46398397729966473
+Global test_loss: 1.7160768127441406
+Global Precision: 0.4706365457815343
+Global Recall: 0.46398397729966473
+Global f1score: 0.4614980161563598
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.49647842516126084
+Global Trainning Loss: 1.5898743176460266
+Global test accurancy: 0.4644239551026472
+Global test_loss: 1.716417112350464
+Global Precision: 0.47096434417776517
+Global Recall: 0.4644239551026472
+Global f1score: 0.46194116616165254
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.4984348944265748
+Global Trainning Loss: 1.5859154605865478
+Global test accurancy: 0.4654775380796826
+Global test_loss: 1.7171926760673524
+Global Precision: 0.4725708918212653
+Global Recall: 0.4654775380796826
+Global f1score: 0.46330094923419035
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.49998332472801177
+Global Trainning Loss: 1.5816234588623046
+Global test accurancy: 0.46496364898692943
+Global test_loss: 1.7173445701599122
+Global Precision: 0.4711852948960063
+Global Recall: 0.46496364898692943
+Global f1score: 0.4622859184258713
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5021309442773163
+Global Trainning Loss: 1.577573983669281
+Global test accurancy: 0.4658348445242494
+Global test_loss: 1.718903088569641
+Global Precision: 0.472831541691102
+Global Recall: 0.4658348445242494
+Global f1score: 0.463513875931408
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5038132289468182
+Global Trainning Loss: 1.5734966945648194
+Global test accurancy: 0.46500612408956804
+Global test_loss: 1.7193783497810364
+Global Precision: 0.4721776688254371
+Global Recall: 0.46500612408956804
+Global f1score: 0.46267611630982364
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.505029946718552
+Global Trainning Loss: 1.5697471284866333
+Global test accurancy: 0.46664587198388796
+Global test_loss: 1.7210475039482116
+Global Precision: 0.4729559388185112
+Global Recall: 0.46664587198388796
+Global f1score: 0.4635662836687171
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5070997871414974
+Global Trainning Loss: 1.5654066228866577
+Global test accurancy: 0.4678254544920901
+Global test_loss: 1.7225217127799988
+Global Precision: 0.4742968237967251
+Global Recall: 0.4678254544920901
+Global f1score: 0.4648504565407718
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5085272166211389
+Global Trainning Loss: 1.5614045810699464
+Global test accurancy: 0.46775519267927007
+Global test_loss: 1.7245669341087342
+Global Precision: 0.4753560300782823
+Global Recall: 0.46775519267927007
+Global f1score: 0.4653328847419319
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5092616234676075
+Global Trainning Loss: 1.5587039113044738
+Global test accurancy: 0.4676305339172988
+Global test_loss: 1.7276988005638123
+Global Precision: 0.4751682648247793
+Global Recall: 0.4676305339172988
+Global f1score: 0.4653591447677655
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.510596308872582
+Global Trainning Loss: 1.5539242219924927
+Global test accurancy: 0.46919699056738323
+Global test_loss: 1.7291043734550475
+Global Precision: 0.476764711271343
+Global Recall: 0.46919699056738323
+Global f1score: 0.4668344745725571
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5126855973932363
+Global Trainning Loss: 1.5490003824234009
+Global test accurancy: 0.4675930934021063
+Global test_loss: 1.730086214542389
+Global Precision: 0.47472689523214745
+Global Recall: 0.4675930934021063
+Global f1score: 0.4651165793470201
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5133966608164878
+Global Trainning Loss: 1.545064480304718
+Global test accurancy: 0.4679406341690533
+Global test_loss: 1.7321190214157105
+Global Precision: 0.4757047882425535
+Global Recall: 0.4679406341690533
+Global f1score: 0.4655661757201792
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5154354575772008
+Global Trainning Loss: 1.5399848413467407
+Global test accurancy: 0.46725028652758954
+Global test_loss: 1.7340806674957276
+Global Precision: 0.47509850138349613
+Global Recall: 0.46725028652758954
+Global f1score: 0.46477262527828433
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5176978713057081
+Global Trainning Loss: 1.5354952383041383
+Global test accurancy: 0.4682937812761723
+Global test_loss: 1.7369938826560973
+Global Precision: 0.47546689673660747
+Global Recall: 0.4682937812761723
+Global f1score: 0.4658128804691322
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5192076949952392
+Global Trainning Loss: 1.5290126752853395
+Global test accurancy: 0.4694101266352103
+Global test_loss: 1.7370382094383239
+Global Precision: 0.4762832745228115
+Global Recall: 0.4694101266352103
+Global f1score: 0.4670024482846319
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5207156848285709
+Global Trainning Loss: 1.5253450441360474
+Global test accurancy: 0.47002125545166146
+Global test_loss: 1.741361336708069
+Global Precision: 0.4765603101050605
+Global Recall: 0.47002125545166146
+Global f1score: 0.46795759172012386
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5215938934101766
+Global Trainning Loss: 1.523293800354004
+Global test accurancy: 0.4706396103417838
+Global test_loss: 1.7458126997947694
+Global Precision: 0.4783486136924818
+Global Recall: 0.4706396103417838
+Global f1score: 0.4679805240504085
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5231463502133995
+Global Trainning Loss: 1.5199536085128784
+Global test accurancy: 0.46976968982247747
+Global test_loss: 1.750675723552704
+Global Precision: 0.47910246522537026
+Global Recall: 0.46976968982247747
+Global f1score: 0.46748501922388724
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5257106504141622
+Global Trainning Loss: 1.5130006575584412
+Global test accurancy: 0.4702402073481669
+Global test_loss: 1.7527947616577149
+Global Precision: 0.47761863462586623
+Global Recall: 0.4702402073481669
+Global f1score: 0.4679619942438274
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5274203454572709
+Global Trainning Loss: 1.5080536222457885
+Global test accurancy: 0.46934115469669513
+Global test_loss: 1.75542692899704
+Global Precision: 0.4777254156602259
+Global Recall: 0.46934115469669513
+Global f1score: 0.4673377835457766
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5296752985661305
+Global Trainning Loss: 1.5033432030677796
+Global test accurancy: 0.4689511178723175
+Global test_loss: 1.7583492827415466
+Global Precision: 0.47616366820856965
+Global Recall: 0.4689511178723175
+Global f1score: 0.4662951899538358
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5314037641399333
+Global Trainning Loss: 1.4989073967933655
+Global test accurancy: 0.4695461188280067
+Global test_loss: 1.7639630126953125
+Global Precision: 0.4776377616649452
+Global Recall: 0.4695461188280067
+Global f1score: 0.4676586480801756
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5325024165339368
+Global Trainning Loss: 1.4953586912155152
+Global test accurancy: 0.4700674914693392
+Global test_loss: 1.76905992269516
+Global Precision: 0.4773274972682112
+Global Recall: 0.4700674914693392
+Global f1score: 0.46766975948276335
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5332239237016964
+Global Trainning Loss: 1.4912545847892762
+Global test accurancy: 0.4702358215415938
+Global test_loss: 1.7732281374931336
+Global Precision: 0.47782501973115066
+Global Recall: 0.4702358215415938
+Global f1score: 0.46766069421622797
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5347415787284014
+Global Trainning Loss: 1.4869942522048951
+Global test accurancy: 0.4705986346849623
+Global test_loss: 1.7796823215484618
+Global Precision: 0.4772258053179762
+Global Recall: 0.4705986346849623
+Global f1score: 0.46800197919410036
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5359002468856655
+Global Trainning Loss: 1.484067828655243
+Global test accurancy: 0.47011481049069787
+Global test_loss: 1.7871783185005188
+Global Precision: 0.4782765497618534
+Global Recall: 0.47011481049069787
+Global f1score: 0.4673607457280291
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5388273747764291
+Global Trainning Loss: 1.4768942451477052
+Global test accurancy: 0.46971812470132257
+Global test_loss: 1.790301306247711
+Global Precision: 0.47728912633419385
+Global Recall: 0.46971812470132257
+Global f1score: 0.4677955279181661
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5398695625766199
+Global Trainning Loss: 1.4736732029914856
+Global test accurancy: 0.4693587860214168
+Global test_loss: 1.7964459991455077
+Global Precision: 0.4762298905705897
+Global Recall: 0.4693587860214168
+Global f1score: 0.4665567157231443
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5401027189294157
+Global Trainning Loss: 1.470452561378479
+Global test accurancy: 0.4679980623411822
+Global test_loss: 1.8050410890579223
+Global Precision: 0.4755178406025388
+Global Recall: 0.4679980623411822
+Global f1score: 0.4656753176149284
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.541532514067846
+Global Trainning Loss: 1.4683388328552247
+Global test accurancy: 0.4682728793080007
+Global test_loss: 1.8140352606773376
+Global Precision: 0.4756708564283096
+Global Recall: 0.4682728793080007
+Global f1score: 0.46502314846272624
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5449215333958838
+Global Trainning Loss: 1.460431797504425
+Global test accurancy: 0.4677187359340314
+Global test_loss: 1.8183138489723205
+Global Precision: 0.474778492636464
+Global Recall: 0.4677187359340314
+Global f1score: 0.46543975711999236
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5458470738962653
+Global Trainning Loss: 1.457856514453888
+Global test accurancy: 0.4661425279438694
+Global test_loss: 1.8252960467338561
+Global Precision: 0.47368996384141066
+Global Recall: 0.4661425279438694
+Global f1score: 0.46379284451333913
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5471959514452278
+Global Trainning Loss: 1.452559244632721
+Global test accurancy: 0.46673205170151916
+Global test_loss: 1.8321198987960816
+Global Precision: 0.4732056208886305
+Global Recall: 0.46673205170151916
+Global f1score: 0.46422920436134624
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5488913213702082
+Global Trainning Loss: 1.45050861120224
+Global test accurancy: 0.4655261947825963
+Global test_loss: 1.8450808763504027
+Global Precision: 0.4729527151296727
+Global Recall: 0.4655261947825963
+Global f1score: 0.46345283811445387
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5503412302074955
+Global Trainning Loss: 1.4451358556747436
+Global test accurancy: 0.4659986004979221
+Global test_loss: 1.8518850469589234
+Global Precision: 0.4732083985633673
+Global Recall: 0.4659986004979221
+Global f1score: 0.46345460976138114
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5523460075977266
+Global Trainning Loss: 1.4395132207870482
+Global test accurancy: 0.46394093902233197
+Global test_loss: 1.8588730382919312
+Global Precision: 0.4718230682576785
+Global Recall: 0.46394093902233197
+Global f1score: 0.4625947301751325
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5529557799188917
+Global Trainning Loss: 1.4359190797805785
+Global test accurancy: 0.4665569819027133
+Global test_loss: 1.8718796896934509
+Global Precision: 0.4730672625215096
+Global Recall: 0.4665569819027133
+Global f1score: 0.46394301500525514
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5544160694792596
+Global Trainning Loss: 1.4312074756622315
+Global test accurancy: 0.46524456391315566
+Global test_loss: 1.881747682094574
+Global Precision: 0.4726461811946546
+Global Recall: 0.46524456391315566
+Global f1score: 0.46340296680366566
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5561368277974189
+Global Trainning Loss: 1.4280694341659546
+Global test accurancy: 0.4647360383013711
+Global test_loss: 1.891072552204132
+Global Precision: 0.47250312867806377
+Global Recall: 0.4647360383013711
+Global f1score: 0.4629391627749422
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5584718153303356
+Global Trainning Loss: 1.4247209405899048
+Global test accurancy: 0.46448627063166126
+Global test_loss: 1.9023492336273193
+Global Precision: 0.47168785931125173
+Global Recall: 0.46448627063166126
+Global f1score: 0.46248932210389576
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.55739778262218
+Global Trainning Loss: 1.4227077651023865
+Global test accurancy: 0.4637187615851803
+Global test_loss: 1.9130746293067933
+Global Precision: 0.470646755382135
+Global Recall: 0.4637187615851803
+Global f1score: 0.4605471915101912
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5616445624534115
+Global Trainning Loss: 1.4139203238487243
+Global test accurancy: 0.46517711201833867
+Global test_loss: 1.9166433143615722
+Global Precision: 0.4723074294151934
+Global Recall: 0.46517711201833867
+Global f1score: 0.4633262409762281
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5622109010231766
+Global Trainning Loss: 1.412954273223877
+Global test accurancy: 0.4635877997904841
+Global test_loss: 1.9347601318359375
+Global Precision: 0.47132574433269114
+Global Recall: 0.4635877997904841
+Global f1score: 0.4617138111697198
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5628202607028593
+Global Trainning Loss: 1.409918565750122
+Global test accurancy: 0.4629333858516528
+Global test_loss: 1.9459171223640441
+Global Precision: 0.47051466037856476
+Global Recall: 0.4629333858516528
+Global f1score: 0.4606486897088549
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5653905761450779
+Global Trainning Loss: 1.407365891933441
+Global test accurancy: 0.4623450599037062
+Global test_loss: 1.959924726486206
+Global Precision: 0.47025386218920684
+Global Recall: 0.4623450599037062
+Global f1score: 0.4605784045977783
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5665679457739143
+Global Trainning Loss: 1.4042000889778137
+Global test accurancy: 0.46323798379255327
+Global test_loss: 1.9718211030960082
+Global Precision: 0.47080936222324904
+Global Recall: 0.46323798379255327
+Global f1score: 0.4611871110964924
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5676720701392218
+Global Trainning Loss: 1.3996110510826112
+Global test accurancy: 0.4651732395277298
+Global test_loss: 1.9837829637527467
+Global Precision: 0.4725048785917088
+Global Recall: 0.4651732395277298
+Global f1score: 0.4632690586869156
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5695884938915912
+Global Trainning Loss: 1.3954990935325622
+Global test accurancy: 0.4652337633680093
+Global test_loss: 1.9942186951637269
+Global Precision: 0.472804506971484
+Global Recall: 0.4652337633680093
+Global f1score: 0.4633220214701199
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5702983548080243
+Global Trainning Loss: 1.3930035901069642
+Global test accurancy: 0.46338017917499746
+Global test_loss: 2.0060454416275024
+Global Precision: 0.4708876531349799
+Global Recall: 0.46338017917499746
+Global f1score: 0.46114291192848766
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5728417315216191
+Global Trainning Loss: 1.388293764591217
+Global test accurancy: 0.46298092736053725
+Global test_loss: 2.0186569452285767
+Global Precision: 0.47059146129168034
+Global Recall: 0.46298092736053725
+Global f1score: 0.4610348521917714
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5747190131567225
+Global Trainning Loss: 1.384617428779602
+Global test accurancy: 0.4629657001061554
+Global test_loss: 2.0287469816207886
+Global Precision: 0.47027772476572055
+Global Recall: 0.4629657001061554
+Global f1score: 0.4609138249925444
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5773478846385605
+Global Trainning Loss: 1.3813137626647949
+Global test accurancy: 0.4635722819038774
+Global test_loss: 2.0436048197746275
+Global Precision: 0.47104296632410286
+Global Recall: 0.4635722819038774
+Global f1score: 0.46167136939764813
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5791056913601765
+Global Trainning Loss: 1.3773453664779662
+Global test accurancy: 0.4625398794907504
+Global test_loss: 2.0521993708610533
+Global Precision: 0.46931071433544874
+Global Recall: 0.4625398794907504
+Global f1score: 0.46009057344962867
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5803927378453654
+Global Trainning Loss: 1.3733745288848878
+Global test accurancy: 0.46251535490524265
+Global test_loss: 2.0645033955574035
+Global Precision: 0.4694538703414994
+Global Recall: 0.46251535490524265
+Global f1score: 0.4603895358366843
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5828358929945368
+Global Trainning Loss: 1.3691777229309081
+Global test accurancy: 0.4626500865452787
+Global test_loss: 2.0753494334220886
+Global Precision: 0.4695875165890797
+Global Recall: 0.4626500865452787
+Global f1score: 0.4605811788675925
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5845454594398065
+Global Trainning Loss: 1.3654105186462402
+Global test accurancy: 0.4614963174555355
+Global test_loss: 2.087656102180481
+Global Precision: 0.4686807103451386
+Global Recall: 0.4614963174555355
+Global f1score: 0.4595135428297494
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5861761979237435
+Global Trainning Loss: 1.361038625240326
+Global test accurancy: 0.4604154059474961
+Global test_loss: 2.097554848194122
+Global Precision: 0.46745935193093496
+Global Recall: 0.4604154059474961
+Global f1score: 0.4583361187548336
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5877589485957164
+Global Trainning Loss: 1.3575330185890198
+Global test accurancy: 0.4598793262030476
+Global test_loss: 2.110431041717529
+Global Precision: 0.467164348177976
+Global Recall: 0.4598793262030476
+Global f1score: 0.4579395571650185
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5894996846950398
+Global Trainning Loss: 1.3526616740226745
+Global test accurancy: 0.45987176576357497
+Global test_loss: 2.1204559874534605
+Global Precision: 0.4674179519970334
+Global Recall: 0.45987176576357497
+Global f1score: 0.4581421782570391
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5908047024061753
+Global Trainning Loss: 1.348170783519745
+Global test accurancy: 0.4595884006952766
+Global test_loss: 2.1306579542160033
+Global Precision: 0.4673596884070364
+Global Recall: 0.4595884006952766
+Global f1score: 0.4578865022975724
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5922150127050365
+Global Trainning Loss: 1.3454553890228271
+Global test accurancy: 0.45839349209022306
+Global test_loss: 2.1434742283821104
+Global Precision: 0.4663306437896081
+Global Recall: 0.45839349209022306
+Global f1score: 0.45664237406044544
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5936681858452495
+Global Trainning Loss: 1.339300925731659
+Global test accurancy: 0.45857350733165597
+Global test_loss: 2.1509359240531922
+Global Precision: 0.4666645832443367
+Global Recall: 0.45857350733165597
+Global f1score: 0.457014923649382
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.595441157630181
+Global Trainning Loss: 1.336719343662262
+Global test accurancy: 0.4585126067839492
+Global test_loss: 2.162913143634796
+Global Precision: 0.46601048218946806
+Global Recall: 0.4585126067839492
+Global f1score: 0.4567921481916953
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5972912212754881
+Global Trainning Loss: 1.3326841616630554
+Global test accurancy: 0.458803131775562
+Global test_loss: 2.1737295174598694
+Global Precision: 0.46630760846694036
+Global Recall: 0.458803131775562
+Global f1score: 0.45714515397020483
+50
+50
+number of selected users 50
+Global Trainning Accurancy: 0.5994216354116122
+Global Trainning Loss: 1.3282692766189574
+Global test accurancy: 0.45890850625097446
+Global test_loss: 2.1840855360031126
+Global Precision: 0.46692029405444513
+Global Recall: 0.45890850625097446
+Global f1score: 0.4573683082042475
+exp_no  0
+0_dataset_CIFAR10_algorithm_MOON_model_CNN_10_50_0.2_31_07_2024

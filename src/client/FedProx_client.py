@@ -8,11 +8,11 @@ from src.client.FedBase_client import FedBase
 
 class FedProx_Client(FedBase):
 
-    def __init__(self, args, i, model, loss, train_set, test_set, data_ratio, device):
-        super().__init__(args, i, model, loss, train_set, test_set, data_ratio, device)
+    def __init__(self, args, i, model, loss, train_set, test_set, data_ratio, device, current_directory):
+        super().__init__(args, i, model, loss, train_set, test_set, data_ratio, device, current_directory)
         
 
-    def local_train(self, global_model_param):
+    def local_train(self, global_model_param, t):
         
         self.local_model.train()
         for iter in range(0, self.local_iters):

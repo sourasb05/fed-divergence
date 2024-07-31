@@ -24,8 +24,8 @@ def main(args):
     while args.exp_no < args.times:
 
         model, loss = define_model_and_loss(args, device)
-        print(model)
-        print(loss)
+        # print(model)
+        # print(loss)
             
         print(args.dataset)
               

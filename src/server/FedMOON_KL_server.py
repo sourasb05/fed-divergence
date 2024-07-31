@@ -23,14 +23,16 @@ class FedMOON_KL_Server(Base_server):
 
         data = read_data(args)
         total_users = len(data[0])
-
+        total_users = len(data[1])
+        self.num_users=len(data[1])
+        
 
                 
         for i in range(0,total_users):
             train, test = read_user_data(i,data,args.dataset)
-            data_ratio = 1/total_users
+            data_ratio = 1/self.num_users_perGR
             # print("data_ratio",data_ratio) ## The ratio is not fixed yet
-            user = FedMOON_KL_Client(args,i, model,loss,train,test,data_ratio,device)   # Creating the instance of the users. 
+            user = FedMOON_KL_Client(args,i, model,loss,train,test,data_ratio,device, curr_dir)   # Creating the instance of the users. 
         
             self.users.append(user)
         
@@ -55,7 +57,7 @@ class FedMOON_KL_Server(Base_server):
             
             print("number of selected users",len(self.selected_users))
             for user in self.selected_users:
-                user.local_train(self.global_model.parameters())
+                user.local_train(self.global_model.parameters(), t)
             
             self.initialize_parameters_to_zero()  # Because we are averaging parameters
             self.global_update()
